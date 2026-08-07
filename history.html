@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Complaint History</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/history.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <h2>Smart Complaint Tracker</h2>
+
+        <ul>
+
+            <li onclick="location.href='citizen-dashboard.html'">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li onclick="location.href='complaint.html'">
+                <i class="fa-solid fa-plus"></i>
+                Register Complaint
+            </li>
+
+            <li class="active">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Complaint History
+            </li>
+
+            <li onclick="location.href='track.html'">
+                <i class="fa-solid fa-location-dot"></i>
+                Track Complaint
+            </li>
+
+            <li onclick="location.href='feedback.html'">
+                <i class="fa-solid fa-star"></i>
+                Feedback
+            </li>
+
+            <li onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <main class="main-content">
+
+        <h1>Complaint History</h1>
+
+        <div class="toolbar">
+
+            <input
+                type="text"
+                id="searchBox"
+                class="form-control"
+                placeholder="Search Complaint ID...">
+
+            <select
+                id="statusFilter"
+                class="form-select">
+
+                <option value="All">All Status</option>
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+
+            </select>
+
+        </div>
+
+        <table class="table table-hover">
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Category</th>
+
+                    <th>Priority</th>
+
+                    <th>Status</th>
+
+                    <th>Date</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="historyTable">
+
+            </tbody>
+
+        </table>
+
+    </main>
+
+</div>
+
+<!-- ==========================
+     View Complaint Modal
+=========================== -->
+
+<div class="modal fade" id="viewModal" tabindex="-1">
+
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+
+            <div class="modal-header bg-primary text-white">
+
+                <h5 class="modal-title">
+
+                    Complaint Details
+
+                </h5>
+
+                <button
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <table class="table table-bordered">
+
+                    <tr>
+
+                        <th>Complaint ID</th>
+
+                        <td id="viewId"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Category</th>
+
+                        <td id="viewCategory"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Title</th>
+
+                        <td id="viewTitle"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Description</th>
+
+                        <td id="viewDescription"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Location</th>
+
+                        <td id="viewLocation"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Department</th>
+
+                        <td id="viewDepartment"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Priority</th>
+
+                        <td id="viewPriority"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Status</th>
+
+                        <td id="viewStatus"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Officer</th>
+
+                        <td id="viewOfficer"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Remarks</th>
+
+                        <td id="viewRemarks"></td>
+
+                    </tr>
+
+                </table>
+
+                <img
+                    id="viewImage"
+                    class="img-fluid rounded"
+                    style="display:none;max-height:300px;">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/history.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

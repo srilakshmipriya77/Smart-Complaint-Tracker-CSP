@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register Complaint</title>
+
+    <link rel="stylesheet" href="css/complaint.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>Smart Complaint Tracker</h2>
+
+        <ul>
+
+            <li onclick="window.location.href='citizen-dashboard.html'">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li class="active">
+                <i class="fa-solid fa-plus"></i>
+                Register Complaint
+            </li>
+
+            <li onclick="window.location.href='history.html'">
+                <i class="fa-solid fa-list"></i>
+                Complaint History
+            </li>
+
+            <li onclick="window.location.href='track.html'">
+                <i class="fa-solid fa-location-dot"></i>
+                Track Complaint
+            </li>
+
+            <li onclick="window.location.href='feedback.html'">
+                <i class="fa-solid fa-star"></i>
+                Feedback
+            </li>
+
+            <li onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <h1>Register New Complaint</h1>
+
+        <div class="form-card">
+
+            <form id="complaintForm">
+
+                <div class="form-group">
+
+                    <label>Complaint Category</label>
+
+                    <select id="category" required>
+
+                        <option value="">Select Category</option>
+
+                        <option>Road Damage</option>
+
+                        <option>Garbage Collection</option>
+
+                        <option>Water Supply</option>
+
+                        <option>Electricity</option>
+
+                        <option>Street Lights</option>
+
+                        <option>Drainage</option>
+
+                        <option>Public Transport</option>
+
+                        <option>Others</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Complaint Title</label>
+
+                    <input
+                    type="text"
+                    id="title"
+                    placeholder="Enter complaint title"
+                    required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Description</label>
+
+                    <textarea
+                    id="description"
+                    rows="5"
+                    placeholder="Describe your issue"
+                    required></textarea>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Location</label>
+
+                    <input
+                    type="text"
+                    id="location"
+                    placeholder="Enter complaint location"
+                    required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Department</label>
+
+                    <select id="department" required>
+
+                        <option value="">Select Department</option>
+
+                        <option>Roads</option>
+
+                        <option>Water Supply</option>
+
+                        <option>Electricity</option>
+
+                        <option>Sanitation</option>
+
+                        <option>Street Lights</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Priority</label>
+
+                    <select id="priority" required>
+
+                        <option value="">Select Priority</option>
+
+                        <option>Low</option>
+
+                        <option>Medium</option>
+
+                        <option>High</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Upload Image (Optional)</label>
+
+                    <input
+                    type="file"
+                    id="image"
+                    accept="image/*">
+
+                </div>
+
+                <button type="submit">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Submit Complaint
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/complaint.js"></script>
+
+</body>
+
+</html>

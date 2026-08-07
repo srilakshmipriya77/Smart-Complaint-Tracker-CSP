@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Manage Officers</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/manage-officers.css">
+
+</head>
+
+<body>
+
+<div class="container py-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <h2>
+
+            <i class="fa-solid fa-user-tie"></i>
+
+            Manage Officers
+
+        </h2>
+
+        <button
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#officerModal">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Add Officer
+
+        </button>
+
+    </div>
+
+    <div class="row mb-3">
+
+        <div class="col-md-6">
+
+            <input
+            type="text"
+            id="searchOfficer"
+            class="form-control"
+            placeholder="Search Officer">
+
+        </div>
+
+        <div class="col-md-4">
+
+            <select
+            id="departmentFilter"
+            class="form-select">
+
+                <option value="All">
+
+                    All Departments
+
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+    <table class="table table-bordered table-hover">
+
+        <thead class="table-primary">
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Name</th>
+
+                <th>Email</th>
+
+                <th>Department</th>
+
+                <th>Mobile</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="officerTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<!-- Modal -->
+
+<div
+class="modal fade"
+id="officerModal">
+
+<div class="modal-dialog">
+
+<div class="modal-content">
+
+<div class="modal-header bg-primary text-white">
+
+<h5 class="modal-title">
+
+Officer Details
+
+</h5>
+
+<button
+class="btn-close btn-close-white"
+data-bs-dismiss="modal">
+
+</button>
+
+</div>
+
+<div class="modal-body">
+
+<input
+type="hidden"
+id="officerId">
+
+<div class="mb-3">
+
+<label>Name</label>
+
+<input
+type="text"
+id="officerName"
+class="form-control">
+
+</div>
+
+<div class="mb-3">
+
+<label>Email</label>
+
+<input
+type="email"
+id="officerEmail"
+class="form-control">
+
+</div>
+
+<div class="mb-3">
+
+<label>Mobile</label>
+
+<input
+type="text"
+id="officerMobile"
+class="form-control">
+
+</div>
+
+<div class="mb-3">
+
+<label>Department</label>
+
+<select
+id="officerDepartment"
+class="form-select">
+
+</select>
+
+</div>
+
+<div class="mb-3">
+
+<label>Password</label>
+
+<input
+type="password"
+id="officerPassword"
+class="form-control">
+
+</div>
+
+</div>
+
+<div class="modal-footer">
+
+<button
+class="btn btn-secondary"
+data-bs-dismiss="modal">
+
+Cancel
+
+</button>
+
+<button
+class="btn btn-success"
+onclick="saveOfficer()">
+
+Save
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/storage.js"></script>
+
+<script src="js/manage-officers.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
