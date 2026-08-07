@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+.container{
+    max-width:1300px;
+}
+
+h2{
+    color:#0f4c81;
+    font-weight:600;
+}
+
+.card{
+    border:none;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    font-size:34px;
+    color:#0f4c81;
+    font-weight:700;
+}
+
+.card p{
+    margin-top:10px;
+    color:#666;
+}
+
+canvas{
+    max-height:350px;
+}
+
+@media(max-width:768px){
+
+.card h3{
+    font-size:28px;
+}
+
+}

@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+.container{
+    max-width:1300px;
+}
+
+h2{
+    color:#0f4c81;
+    font-weight:600;
+}
+
+.table{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.table thead{
+    background:#0f4c81;
+    color:#fff;
+}
+
+.table th,
+.table td{
+    text-align:center;
+    vertical-align:middle;
+}
+
+.btn{
+    margin:2px;
+}
+
+.badge{
+    padding:8px 12px;
+    font-size:13px;
+}
+
+.form-control,
+.form-select{
+    border-radius:8px;
+}
+
+@media(max-width:768px){
+
+.table{
+    font-size:13px;
+}
+
+h2{
+    font-size:22px;
+}
+
+.btn{
+    font-size:13px;
+}
+
+}

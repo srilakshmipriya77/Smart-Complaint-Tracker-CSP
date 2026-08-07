@@ -1,0 +1,279 @@
+/* ==========================
+   Global Styles
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+/* ==========================
+   Sidebar
+========================== */
+
+.sidebar{
+
+    width:270px;
+    min-height:100vh;
+
+    background:#0f4c81;
+
+    color:white;
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+}
+
+.sidebar h3{
+
+    border-bottom:1px solid rgba(255,255,255,.2);
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+    padding:20px;
+
+}
+
+.sidebar ul li{
+
+    padding:15px;
+
+    margin-bottom:10px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:16px;
+
+}
+
+.sidebar ul li:hover{
+
+    background:#2563eb;
+
+}
+
+.sidebar ul li.active{
+
+    background:#2563eb;
+
+}
+
+.sidebar ul li i{
+
+    margin-right:10px;
+
+    width:20px;
+
+}
+
+/* ==========================
+   Main Content
+========================== */
+
+.content{
+
+    margin-left:270px;
+
+    width:calc(100% - 270px);
+
+    min-height:100vh;
+
+}
+
+/* ==========================
+   Navbar
+========================== */
+
+.navbar{
+
+    height:70px;
+
+}
+
+.navbar h4{
+
+    color:#0f4c81;
+    font-weight:600;
+
+}
+
+/* ==========================
+   Dashboard Cards
+========================== */
+
+.dashboard-card{
+
+    border:none;
+
+    border-radius:15px;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.dashboard-card i{
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+}
+
+.dashboard-card h2{
+
+    font-size:36px;
+
+    font-weight:bold;
+
+}
+
+.dashboard-card p{
+
+    margin-top:10px;
+
+    font-size:16px;
+
+}
+
+/* ==========================
+   Recent Complaint Table
+========================== */
+
+.card{
+
+    border:none;
+
+    border-radius:15px;
+
+}
+
+.card-header{
+
+    font-weight:600;
+
+}
+
+.table{
+
+    margin-bottom:0;
+
+}
+
+.table thead{
+
+    background:#0f4c81;
+
+    color:white;
+
+}
+
+.table td{
+
+    vertical-align:middle;
+
+}
+
+/* ==========================
+   Status Badge
+========================== */
+
+.badge{
+
+    padding:8px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.btn-action{
+
+    margin-right:5px;
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:992px){
+
+.sidebar{
+
+    width:220px;
+
+}
+
+.content{
+
+    margin-left:220px;
+
+    width:calc(100% - 220px);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.sidebar{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:auto;
+
+}
+
+.content{
+
+    margin-left:0;
+
+    width:100%;
+
+}
+
+.dashboard-card{
+
+    margin-bottom:20px;
+
+}
+
+}

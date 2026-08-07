@@ -1,0 +1,215 @@
+/* ===================================
+   Global Styles
+=================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===================================
+   Sidebar
+=================================== */
+
+.sidebar {
+    width: 260px;
+    background: #0f4c81;
+    color: white;
+    padding: 25px;
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100%;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+    background: #2563eb;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+/* ===================================
+   Main Content
+=================================== */
+
+.main-content {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 30px;
+}
+
+.main-content h1 {
+    color: #0f4c81;
+    margin-bottom: 20px;
+}
+
+/* ===================================
+   Toolbar
+=================================== */
+
+.toolbar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.toolbar input,
+.toolbar select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 250px;
+}
+
+/* ===================================
+   Table
+=================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+thead {
+    background: #0f4c81;
+    color: white;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tbody tr:hover {
+    background: #eef5ff;
+}
+
+/* ===================================
+   Status
+=================================== */
+
+.status {
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.pending {
+    background: orange;
+}
+
+.progress {
+    background: dodgerblue;
+}
+
+.completed {
+    background: green;
+}
+
+/* ===================================
+   Buttons
+=================================== */
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.view-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.edit-btn {
+    background: orange;
+    color: white;
+}
+
+.delete-btn {
+    background: crimson;
+    color: white;
+}
+
+button:hover {
+    opacity: .9;
+}
+
+/* ===================================
+   Responsive
+=================================== */
+
+@media(max-width:768px){
+
+.container{
+    flex-direction:column;
+}
+
+.sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+}
+
+.main-content{
+    margin-left:0;
+    width:100%;
+}
+
+.toolbar{
+    flex-direction:column;
+}
+
+.toolbar input,
+.toolbar select{
+    width:100%;
+}
+
+table{
+    font-size:13px;
+}
+
+}
