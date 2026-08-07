@@ -124,11 +124,10 @@ header h1{
 .card.pending{
     background:#f39c12;
 }
-
+/* 
 .card.progress{
-    height: 100px;
     background:#18a9c9;
-}
+} */
 .card.completed{
     background:#1e9d47;
 }
@@ -148,6 +147,10 @@ header h1{
     margin:0;
 }
 
+#progress{
+   background:#18a9c9;
+   padding:10px;
+}
 /* ===================================
    Complaint Section
 =================================== */
