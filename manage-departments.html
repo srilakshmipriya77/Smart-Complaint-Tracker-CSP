@@ -22,6 +22,43 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <div class="container py-4">
 
     <div class="d-flex justify-content-between align-items-center mb-4">
+        <!-- Sidebar -->
+    <div class="sidebar">
+        <h3 class="text-center text-white py-3">
+            Smart Complaint Tracker
+        </h3>
+        <ul>
+            <li
+                onclick="window.location.href='admin-dashboard.html'">
+                <i class="fa-solid fa-chart-line"></i>
+                Dashboard
+            </li>
+            <li onclick="window.location.href='manage-citizens.html'">
+                <i class="fa-solid fa-users"></i>
+                Manage Citizens
+            </li>
+            <li onclick="window.location.href='manage-officers.html'">
+                <i class="fa-solid fa-user-tie"></i>
+                Manage Officers
+            </li>
+            <li class="active" onclick="window.location.href='manage-departments.html'">
+                <i class="fa-solid fa-building"></i>
+                Departments
+            </li>
+            <li onclick="window.location.href='assign-complaints.html'">
+                <i class="fa-solid fa-list-check"></i>
+                Assign Complaints
+            </li>
+            <li onclick="window.location.href='reports.html'">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </li>
+            <li onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </li>
+        </ul>
+    </div>
 
         <h2>
 
